@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   <nav class="navbar is-info">
   <div class="container">
   <div class="navbar-brand">
-    <a class="navbar-item">🔥Gif Battles</a>
+    <a routerLink="/" class="navbar-item">🔥Gif Battles</a>
   </div>
 
   <div class="navbar menu">
   <div class="navbar-end">
-  <a class="navbar-item">💥 Battle</a>
-  <a class="navbar-item">🌴 Create</a>
-  <a class="navbar-item">⭐ Leaderboard</a>
+  <a routerLink="/" class="navbar-item">💥 Battle</a>
+  <a routerLink="create" class="navbar-item">🌴 Create</a>
+  <a routerLink="leaderboard" class="navbar-item">⭐ Leaderboard</a>
   </div>
   </div>
 
