@@ -11,7 +11,7 @@ export class GifService {
 
   // CREATE =============================================
   getRandom(){
-
+return this.http.get(`${this.apiUrl}/random`);
   }
 
   // Store a gif
@@ -40,5 +40,5 @@ vote(id){
   }
 
 
-  
+
 }
