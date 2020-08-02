@@ -32,7 +32,7 @@ import { GifService } from 'src/app/core/services/gif.service';
     width: 100%;
   }
 
-  img {
+  ::ng-deep img {
     width: 100%;
     border-radius: 3px;
   }

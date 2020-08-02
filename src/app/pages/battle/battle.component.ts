@@ -20,7 +20,7 @@ import { GifService } from 'src/app/core/services/gif.service';
   </div>
   `,
   styles: [`
-  img {
+  ::ng-deep img {
     width:100%;
     height: 300px;
   }
