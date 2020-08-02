@@ -37,7 +37,8 @@ return this.http.post(`${this.apiUrl}/vote`, {id});
 
 
   // LEADERBOARD ========================================
-  getLeaderboard(){
+  getLeaderboard():Observable<Gif[]>{
+    return this.http.get<Gif[]>(`${this.apiUrl}/leaderboard`);
 
   }
 
