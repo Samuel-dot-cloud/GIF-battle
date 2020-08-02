@@ -7,11 +7,11 @@ import { GifService } from 'src/app/core/services/gif.service';
  <h1 class="title has-text-centered">Create a Gif</h1>
 
  <div class="box">
- <div class="gif-container" *ngIf="randomGif">
- <img [src]="randomGif.url">
-
- <div class="caption">{{caption}}</div>
- </div>
+ <app-gif
+ *ngIf="randomGif"
+ [url]="randomGif.url"
+ [caption]="caption">
+ </app-gif>
 
  <div class="field">
  <input type="text" class="input" [(ngModel)]="caption">
@@ -21,24 +21,11 @@ import { GifService } from 'src/app/core/services/gif.service';
  </div>
   `,
   styles: [`
-.gif-container{
-  position: relative;
+.box{
+  max-width: 50%;
+  margin: 0 auto;
 }
 
-  .caption{
-    display: block;
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    bottom: 30px;
-    text-align: center;
-    color: #FFF;
-    font-size: 30px;
-    text-transform: uppercase;
-    line-height: 1;
-    word-break: break-all;
-    text-shadow: 1px 1px 3px #000;
-  }
 
   .button {
     display: block;
