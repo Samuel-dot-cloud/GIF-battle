@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,9 @@ return this.http.get(`${this.apiUrl}/random`);
   }
 
   // Store a gif
-  save(){
-
+  save(id:string, url:string, caption:string):
+  Observable<any>{
+return this.http.post(this.apiUrl, {id, url, caption, votes: 0});
   }
 
 

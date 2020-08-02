@@ -59,9 +59,26 @@ export class CreateComponent implements OnInit {
   constructor(private gifService: GifService) { }
 
   ngOnInit() {
+  this.getRandomGif();
+  }
+
+  getRandomGif(){
     this.gifService.getRandom()
-    .subscribe(gif =>{
-      this.randomGif = gif;
+    .subscribe(gif =>
+      this.randomGif = gif);
+  }
+
+  saveGif(){
+    this.gifService.save(this.randomGif.id, this.randomGif.url, this.caption )
+    .subscribe(data => {
+      //reload the gif, get a random one
+      this.getRandomGif();
+
+      //clear the caption
+      this.caption = '';
+
+      //show a notification of success
+
     })
   }
 
