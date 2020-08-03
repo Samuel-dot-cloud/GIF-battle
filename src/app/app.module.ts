@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import{FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
@@ -19,7 +20,8 @@ import {PagesModule} from './pages/pages.module';
     FormsModule,
     HttpClientModule,
     CoreModule,
-    PagesModule
+    PagesModule,
+    FlashMessagesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
